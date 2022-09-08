@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-front
+  labels:
+    run: my-app-front
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: my-app-front
