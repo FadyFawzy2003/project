@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app-user
+  name: backend-user-deployment
   labels:
-    run: my-app-user
+    run: backend-user-deployment
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    run: my-app-user
+    run: backend-user-deployment

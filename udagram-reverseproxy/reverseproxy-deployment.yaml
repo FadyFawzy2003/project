@@ -17,5 +17,12 @@ spec:
       containers:
       - name: reverseproxy
         image: fadyfawzy/reverseproxy
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "2024Mi"
+            cpu: "1000m"
         ports:
         - containerPort: 80
