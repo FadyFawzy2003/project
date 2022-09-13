@@ -26,3 +26,10 @@ spec:
             cpu: "1000m"
         ports:
         - containerPort: 80
+        livenessProbe:
+          exec:
+            command:
+            - cat
+            - /tmp/healthy
+          initialDelaySeconds: 5
+          periodSeconds: 15
